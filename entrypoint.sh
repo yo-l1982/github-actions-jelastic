@@ -19,3 +19,4 @@ then
 fi
 
 echo "$response"
+exit 0
