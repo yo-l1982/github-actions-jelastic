@@ -7,6 +7,8 @@ json=$2
 command=$3
 home="/cli/jelastic"
 
+echo "hello"
+
 if [ "$login" == "true" ]
 then
   echo n | $home/users/authentication/signin --login "$JELASTIC_USERNAME" --password "$JELASTIC_PASSWORD" --platformUrl "$JELASTIC_URL"
