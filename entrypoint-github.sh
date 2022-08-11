@@ -12,4 +12,7 @@ echo "hello 3"
 IFS=" " read -r -a args <<< "$@"
 echo "hello 4"
 response=$(/cli/entrypoint.sh "${args[@]}")
+echo "hello 5"
 echo "::set-output name=output::$response"
+echo "hello 6"
+exit 1
