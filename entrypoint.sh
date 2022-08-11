@@ -13,9 +13,4 @@ then
 fi
 response=$("$home/$command" "${@:3}")
 
-if [ "$json" == "true" ]
-then
-  response=$(echo "$response" | sed -n '1!p' | jq --compact-output || echo "$response")
-fi
-
 echo "$response"
