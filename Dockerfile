@@ -1,4 +1,4 @@
-FROM openjdk:16-alpine3.13
+FROM openjdk:19-jdk-alpine3.15
 # Labels
 LABEL maintainer="dovnar.alexander@gmail.com"
 # Install Bash, cURL and clean up APK
