@@ -18,5 +18,6 @@ response=$("$home/$command" "${@:3}")
 #   response=$(echo "$response" | sed -n '1!p' | jq --compact-output || echo "$response")
 # fi
 
-echo response
+echo "$response"
 exit 0
+
