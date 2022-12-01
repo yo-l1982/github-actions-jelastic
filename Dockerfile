@@ -5,18 +5,12 @@ LABEL maintainer="dovnar.alexander@gmail.com"
 RUN apk add --no-cache curl bash jq && \
     rm -vrf /var/cache/apk/*
 # Create User and Group
-ENV USER=docker
-ENV _UID=12345
-ENV _GID=23456
-RUN mkdir /cli && \
-    addgroup --gid "$_GID" --system "$USER" && \
-    adduser --disabled-password --gecos "" --home /cli \
-    --ingroup "$USER" --uid "$_UID" "$USER" && \
-    chown $USER:$USER /cli
+
+RUN mkdir /cli
 # Changing workdir
 WORKDIR /cli
 # Changing user
-USER docker
+
 # Enable Pipefail
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Install Jelastic CLI
