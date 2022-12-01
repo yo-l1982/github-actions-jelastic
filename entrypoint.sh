@@ -19,6 +19,6 @@ $home/$command --silent true > ./response
 #   response=$(echo "$response" | sed -n '1!p' | jq --compact-output || echo "$response")
 # fi
 
-echo cat ./response
+cat ./response
 exit 0
 
