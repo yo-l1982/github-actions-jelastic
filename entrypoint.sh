@@ -9,10 +9,10 @@ home="/cli/jelastic"
 
 if [ "$login" == "true" ]
 then
-  /cli/jelastic/users/authentication/signin --login "$JELASTIC_USERNAME" --password "$JELASTIC_PASSWORD" --platformUrl "$JELASTIC_URL" --silent
+  echo n | $home/users/authentication/signin --login "$JELASTIC_USERNAME" --password "$JELASTIC_PASSWORD" --platformUrl "$JELASTIC_URL" --silent
 fi
 
-response=$("$home/$command --silent") 
+response=$("$home/$command" "--silent") 
 
 # if [ "$json" == "true" ]
 # then
