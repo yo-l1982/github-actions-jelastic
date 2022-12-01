@@ -12,13 +12,13 @@ then
   echo n | $home/users/authentication/signin --silent --login $JELASTIC_USERNAME --password $JELASTIC_PASSWORD --platformUrl $JELASTIC_URL > /dev/null
 fi
 
-response=$("$home/$command" "--silent true") 
+$home/$command --silent true > ./response
 
 # if [ "$json" == "true" ]
 # then
 #   response=$(echo "$response" | sed -n '1!p' | jq --compact-output || echo "$response")
 # fi
 
-echo "$response"
+echo cat ./response
 exit 0
 
