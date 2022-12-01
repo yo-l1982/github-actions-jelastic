@@ -12,7 +12,7 @@ then
   echo n | $home/users/authentication/signin --silent --login $JELASTIC_USERNAME --password $JELASTIC_PASSWORD --platformUrl $JELASTIC_URL > /dev/null
 fi
 
-response=$("$home/$command" "--silent=true") 
+response=$("$home/$command" "--silent true") 
 
 # if [ "$json" == "true" ]
 # then
