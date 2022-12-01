@@ -9,7 +9,7 @@ home="/cli/jelastic"
 
 if [ "$login" == "true" ]
 then
-  $home/users/authentication/signin --login "$JELASTIC_USERNAME" --password "$JELASTIC_PASSWORD" --platformUrl "$JELASTIC_URL" --silent
+  /cli/jelastic/users/authentication/signin --login "$JELASTIC_USERNAME" --password "$JELASTIC_PASSWORD" --platformUrl "$JELASTIC_URL" --silent
 fi
 
 response=$("$home/$command --silent") 
