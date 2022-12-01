@@ -9,6 +9,5 @@ cd $HOME
 IFS=" " read -r -a args <<< "$@"
 
 response=$(/cli/entrypoint.sh "${args[@]}")
-echo $response
 
 echo "output=$response" >> $GITHUB_OUTPUT

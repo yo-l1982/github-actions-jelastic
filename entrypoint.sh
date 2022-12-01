@@ -13,12 +13,6 @@ then
 fi
 
 $home/$command --silent true > ./response
-
-# if [ "$json" == "true" ]
-# then
-#   response=$(echo "$response" | sed -n '1!p' | jq --compact-output || echo "$response")
-# fi
-
 cat ./response
 exit 0
 
